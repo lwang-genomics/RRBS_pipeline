@@ -4,14 +4,16 @@ A lightweight and user-friendly Bash pipeline for Reduced Representation Bisulfi
 
 ## Features
 - Supports both single-end and paired-end FASTQ files
-- Automatic detection of mode based on arguments
-- Integrates industry-standard tools: trim_galore, bismark, and multiqc
-- Creates a detailed log file ({sample}.log) with timestamps and command summaries
+- Automatic detection of mode-based arguments
+- Creates a detailed log file ({sampleX}.log) with timestamps and command & execution details
 - --dry-run option to preview commands without execution
 - Clean and minimal dependencies — no workflow engine needed
 
 ## Requirements
-	Trim Galore
+
+Please ensure the following tools are installed and accessible from your system PATH:
+
+	Trim_galore
 	Bismark
 	MultiQC
 	Bowtie2
@@ -34,7 +36,7 @@ Dry-run mode (preview commands only):
 ## Output
 - \*.log — per-sample execution log with steps and timestamps
 - \*_dedup.bam — deduplicated aligned BAM file
-- \*_Methylation_report.txt, \*.bedGraph.gz — methylation calls
+- \*_Methylation_report.txt, \*.bedGraph.gz, \*.cov.gz — methylation calls
 - multiqc_report.html — combined quality control summary
 
 
