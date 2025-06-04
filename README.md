@@ -20,18 +20,18 @@ Please ensure the following tools are installed and accessible from your system 
 
 ## Usage
 ```
-chmod +x rrbs_pipeline.sh
-./rrbs_pipeline.sh sample_R1.fastq.gz sample_R2.fastq.gz /path/to/bowtie2_index
+chmod +x run_rrbs.sh
+./run_rrbs.sh sample_R1.fastq.gz sample_R2.fastq.gz /path/to/bowtie2_index
 ```
 
 For single-end:
 ```
-./rrbs_pipeline.sh sample.fastq.gz /path/to/bowtie2_index
+./run_rrbs.sh sample.fastq.gz /path/to/bowtie2_index
 ```
 
 Dry-run mode (preview commands only):
 ```
-./rrbs_pipeline.sh sample.fastq.gz /path/to/bowtie2_index --dry-run
+./run_rrbs.sh sample.fastq.gz /path/to/bowtie2_index --dry-run
 ```
 ## Output
 - \*.log — per-sample execution log with steps and timestamps
