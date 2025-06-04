@@ -164,7 +164,7 @@ run_cmd multiqc . --outdir .
 # Cleanup: Remove intermediate files
 # ────────────────────────────────────────────
 log_step "7" "Cleanup Intermediate Files"
-run_cmd rm -f *deduplicated.txt.gz *bt2.bam *M-bias.txt *val_*.fq.gz
+run_cmd rm -f *deduplicated.txt.gz *bt2.bam *pe.bam *M-bias.txt *val_*.fq.gz
 
 # Recreate key outputs
 run_cmd mv "$DEDUP_BAM" "${SAMPLE}.deduplicated.bam"
@@ -182,10 +182,7 @@ echo "Sample name     : $SAMPLE"
 echo "Mode            : $MODE"
 echo "Genome index    : $GENOME_DIR"
 echo "Final BAM       : $DEDUP_BAM"
-echo "Methylation     : ${DEDUP_BAM%.bam}_Methylation_report.txt (or .gz/bedGraph)"
+echo "Methylation     : ${DEDUP_BAM%.bam}_Methylation_report.txt (or cov.gz/bedGraph.gz)"
 echo "QC Report       : multiqc_report.html"
 echo "Log saved to    : $LOGFILE"
 } >> "$LOGFILE"
-
-
-
