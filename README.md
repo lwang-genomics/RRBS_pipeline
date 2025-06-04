@@ -63,7 +63,7 @@ Sample: SRR17518177 | Mode: paired-end | Dry-run: true
 ----------------------------------------------------------------------------------------------------
                                        STAGE 3: Bismark Alignment
 ----------------------------------------------------------------------------------------------------
->> bismark --genome /Users/dale/genomes/hg38/bowtie2_index -1 SRR17518177.R1_val_1.fq.gz -2 SRR17518177.R2_val_2.fq.gz -o .
+>> bismark --genome ~/genomes/hg38/bowtie2_index -1 SRR17518177.R1_val_1.fq.gz -2 SRR17518177.R2_val_2.fq.gz -o .
 
 ----------------------------------------------------------------------------------------------------
                                        STAGE 4: Deduplicate BAM
@@ -91,7 +91,7 @@ Pipeline completed at 2025-06-04 07:46:55
 ========== SUMMARY ==========
 Sample name     : SRR17518177
 Mode            : paired
-Genome index    : /Users/dale/genomes/hg38/bowtie2_index
+Genome index    : ~/genomes/hg38/bowtie2_index
 Final BAM       : SRR17518177.deduplicated.bam
 Methylation     : SRR17518177.deduplicated_Methylation_report.txt (or .gz/bedGraph)
 QC Report       : multiqc_report.html
